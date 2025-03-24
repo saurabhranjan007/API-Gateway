@@ -26,7 +26,6 @@ Zeneye Gateway is an API gateway built with Go and Gin that handles user managem
 
     ```sh
     https://github.com/saurabhranjan007/API-Gateway
-    cd zeneye-gateway
     ```
 
 2. Create `.env` files for different environments with the necessary environment variables:
@@ -60,8 +59,8 @@ Zeneye Gateway is an API gateway built with Go and Gin that handles user managem
     ##### Running in Development Environment
 
     ```sh
-    go run cmd/zeneye-gateway/main.go
-    GO_ENV=development go run cmd/zeneye-gateway/main.go
+    go run main.go
+    GO_ENV=development go run main.go
     ```
     By default the environment is set to development. 
 
@@ -74,12 +73,12 @@ Zeneye Gateway is an API gateway built with Go and Gin that handles user managem
     Alternatively, it can be set directly in the command that runs the application:
 
     ``` sh 
-    GO_ENV=production go run cmd/zeneye-gateway/main.go
+    GO_ENV=production go run main.go
     ```
 
     ##### Create Build to Run 
     ```sh
-    go build -o zeneye-gateway cmd/zeneye-gateway/main.go | go build cmd/zeneye-gateway/main.go
+    go build -o zeneye-gateway main.go | go build main.go
     ```
 
 4. Run tests:
